@@ -1,0 +1,30 @@
+/* CSS Document */
+	body{
+		background-image:url('../../img/texture.jpg');
+	}
+	table{
+	background-color:#FFF;
+	color: #C60;
+	}
+	h1{
+	font-size: 54px;
+	font-weight: bold;
+	color: #FFF;
+	}
+	.pname{
+		width:30%;
+		font-weight: bold;
+	}
+	.a1{
+		background-color: #C60;
+	}
+	.btn-primary{
+		background-color: #C60;
+	}
+	.product_box{
+		width:320px;
+		border:medium;
+		margin:1%;
+		float:left;
+		text-align:center;
+	}

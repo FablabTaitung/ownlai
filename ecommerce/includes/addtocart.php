@@ -1,0 +1,28 @@
+<?
+	session_start(); 
+	$id=$_POST['id'];
+	$name=$_POST['name'];
+	$size=$_POST['size'];
+	$amount=$_POST['amount'];
+	$price=$_POST['price'];
+	$total=$amount*$price;
+	if(is_array($_SESSION['cart'])){
+		$max=count($_SESSION['cart']);
+		$_SESSION['cart'][$max]['id']=$id;
+		$_SESSION['cart'][$max]['name']=$name;
+		$_SESSION['cart'][$max]['size']=$size;
+		$_SESSION['cart'][$max]['price']=$price;
+		$_SESSION['cart'][$max]['amount']=$amount;
+		$_SESSION['cart'][$max]['total']=$total;
+	}else{
+		$_SESSION['cart']=array();
+		$_SESSION['cart'][0]['id']=$id;
+		$_SESSION['cart'][0]['name']=$name;
+		$_SESSION['cart'][0]['size']=$size;
+		$_SESSION['cart'][0]['price']=$price;
+		$_SESSION['cart'][0]['amount']=$amount;
+		$_SESSION['cart'][0]['total']=$total;
+	}
+	
+	header('location:../cart.php');
+?>
